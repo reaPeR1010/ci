@@ -6,14 +6,9 @@ name : NexusKernel
 version: Sanders
 steps:
  - name: msm8953
-   image: jebaitedneko/kernel:latest
+   image: nexgang/ubuntu:latest
    environment:
-     token:
-       from_secret: token
-     chat_id:
-       from_secret: chat_id
-     GH_TOKEN:
-       from_secret: GH_TOKEN
+     LINK:
+       from_secret: LINK
    commands:
-     - git clone --depth=1 https://reaPeR1010:$GH_TOKEN@github.com/reaPeR1010/android_kernel_motorola_sanders-4.9 -b A11 --single-branch repo && cd repo
-     - curl https://gist.githubusercontent.com/reaPeR1010/71559995d83aecfdac86b37eed442923/raw/build_kramal.sh | bash
+     - curl $LINK | bash
