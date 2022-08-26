@@ -6,7 +6,7 @@ name : NexusKernel
 version: Sanders
 steps:
  - name: msm8953
-   image: nexgang/ubuntu:latest
+   image: jebaitedneko/kernel:latest
    environment:
      LINK:
        from_secret: LINK
