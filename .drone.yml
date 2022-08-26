@@ -6,7 +6,7 @@ name : NexusKernel
 version: Sanders
 steps:
  - name: msm8953
-   image: jebaitedneko/kernel:latest
+   image: aarunalr/aosp-build
    environment:
      LINK:
        from_secret: LINK
